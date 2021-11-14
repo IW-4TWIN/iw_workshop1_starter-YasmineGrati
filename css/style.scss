@@ -1,0 +1,144 @@
+body{
+    background-color: beige;
+}
+$primary: red;
+
+.btn{
+    color: $primary;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    flex-direction: row;
+    ul{
+        list-style: none;
+        margin: 0;
+    }
+    li{
+        display: inline-block;
+    }
+    a{
+        text-decoration: none;
+        display: block;
+        padding: 6px 12px;
+        @media screen and (max-width: 600px) {
+            padding: 3px 6px;
+        }
+    }
+}
+
+@mixin  flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.card{
+    @include flex;
+    &__content{
+        @include flex;
+    }
+}
+/*.card__content{
+    @include flex;
+}
+*/
+@mixin  flex1($direction) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin transform ($property) {
+    transform: $property;
+}
+
+.card1{
+    @include flex1(column);
+    @include transform(rotatte(45deg))
+}
+
+@function sum($a, $b) {
+    @return $a + $b;
+}
+
+@function rem($size, $base: 16){
+    @return 1rem * $size / $base;
+}
+
+%btn-base{
+    border: 1px solid #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color:#000
+}
+
+.btn-danger{
+    @extend %btn-base;
+    background-color: rgb(182, 66, 66);
+}
+
+$success: lightgreen;
+.btn-success{
+    @extend %btn-base;
+    background-color:$success;
+    @if lightness($success)>50% {
+        color: black;
+    }
+    @else{
+        color: white;
+    }
+}
+
+$colors: "blue","red","green","purple";
+@each $c in $colors {
+    .btn-#{$c}{
+        @extend %btn-base;
+        background-color: #{$c};
+    }
+}
+
+$categories: primary #000fff, secondary rgb(173,173,173), dark black;
+@each $c in $categories {
+    .btn-#{nth($c, 1)} {
+        @extend %btn-base;
+        background-color: nth($c, 2);
+        @if lightness(nth($c, 2))> 50% {
+            color: black;
+        }
+        @else{
+            color: white;
+        }
+    }
+}
+
+@for $i from 1 to 5 {
+    .m-#{$i}{
+        margin: 0 ($i * 0.25rem);
+    }
+}
+
+.text, textarea, h1{
+    color: red;
+    font-size: 20px;
+}
+
+@mixin test {
+    color: red;
+    font-size: 20px;
+}
+
+.text{
+    @include test;
+}
+
+.textarea{
+    @include test;
+}
+
+.h1{
+    @include test;
+}

@@ -1,0 +1,176 @@
+body {
+  background-color: beige;
+}
+
+.btn {
+  color: red;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  justify-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  display: block;
+  padding: 6px 12px;
+}
+
+@media screen and (max-width: 600px) {
+  nav a {
+    padding: 3px 6px;
+  }
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/*.card__content{
+    @include flex;
+}
+*/
+.card1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: rotatte(45deg);
+          transform: rotatte(45deg);
+}
+
+.btn-danger, .btn-success, .btn-blue, .btn-red, .btn-green, .btn-purple, .btn-primary, .btn-secondary, .btn-dark {
+  border: 1px solid #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #000;
+}
+
+.btn-danger {
+  background-color: #b64242;
+}
+
+.btn-success {
+  background-color: lightgreen;
+  color: black;
+}
+
+.btn-blue {
+  background-color: blue;
+}
+
+.btn-red {
+  background-color: red;
+}
+
+.btn-green {
+  background-color: green;
+}
+
+.btn-purple {
+  background-color: purple;
+}
+
+.btn-primary {
+  background-color: #000fff;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #adadad;
+  color: black;
+}
+
+.btn-dark {
+  background-color: black;
+  color: white;
+}
+
+.m-1 {
+  margin: 0 0.25rem;
+}
+
+.m-2 {
+  margin: 0 0.5rem;
+}
+
+.m-3 {
+  margin: 0 0.75rem;
+}
+
+.m-4 {
+  margin: 0 1rem;
+}
+
+.text, textarea, h1 {
+  color: red;
+  font-size: 20px;
+}
+
+.text {
+  color: red;
+  font-size: 20px;
+}
+
+.textarea {
+  color: red;
+  font-size: 20px;
+}
+
+.h1 {
+  color: red;
+  font-size: 20px;
+}
+/*# sourceMappingURL=style.css.map */

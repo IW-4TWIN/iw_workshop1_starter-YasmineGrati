@@ -142,10 +142,44 @@ ________________________
 Navbar
 ________________________
 */
+.nav-center{
+    display: flex;
+    max-width: 1120px;
+    width: 90vw;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    background-color: #ff9d9d;
+    align-items: center;
+    margin: 0 10%;
+    width: 80%;
+}
+.nav-logo img{
+    width: 200px;
+}
+.contact-link{
+    margin-left: 20rem;
+}
+.nav-link{
+    padding: 0.5rem 0;
+    margin-left: 2rem;
+}
 
+@media screen and (max-width: 992px) {
+    .nav-center{
+        flex-direction: column;
+    }
+    .nav-links{
+        flex-direction: column;
+    }
+    .nav-link{
+        border-top: 1px solid var(--grey-500);
+        width: 100%;
+        text-align: center;
+    }
+}
 
-
-/*
 ________________________
 Positions
 ________________________
